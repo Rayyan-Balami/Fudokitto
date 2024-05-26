@@ -315,7 +315,8 @@
         </div>
 
         <!-- user profile dropdown -->
-        <div id="profileDropdown" class="hidden absolute top-14 right-4 w-[10rem] p-2 bg-white border border-gray-100 rounded-3xl shadow-lg ">
+        <div id="profileDropdown"
+          class="hidden absolute top-14 right-4 w-[10rem] p-2 bg-white border border-gray-100 rounded-3xl shadow-lg ">
           <ul>
             <li>
               <a href="#"
@@ -361,623 +362,671 @@
     <!-- header end -->
 
     <!-- card content start -->
-    <section
-      class="p-6">
+    <section class="p-6">
 
-        <div class="grid grid-cols-12">
-          <div class="col-span-12 xl:col-span-8 lg:pr-6 max-xl:pb-16">
-            <div class="pb-4 border-b border-gray-200">
-              <h2 class="flex items-center justify-between font-medium text-xl tracking-tight">
-                <span>Shopping Cart</span>
+      <div class="grid grid-cols-12">
+
+        <!-- cart section  -->
+        <div class="col-span-12 xl:col-span-8 lg:pr-6 max-xl:pb-16">
+          <div class="pb-4 border-b border-gray-200">
+            <h2 class="flex items-center justify-between font-medium text-xl tracking-tight">
+              <span>Shopping Cart</span>
               <span class="text-lg text-gray-700 ">3 Items</span>
             </h2>
-            </div>
-
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
-            
-            <!-- cart card -->
-            <div class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
-              <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
-                <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
-                  alt="" class="h-full w-full object-cover object-center">
-              </div>
-              <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
-                <!-- title of the recipe -->
-                <h3 class="font-medium line-clamp-2 leading-tight capitalize">
-                  12" Hybrid Wok with Lid
-                </h3>
-                <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
-                  <!-- rating -->
-                  <div class="flex items-center gap-1">
-                    <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
-                    </svg>
-                    3.5 - 12K
-                  </div>
-                  <!-- time to cook / price -->
-                  <p>Rs. 1899</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-center">
-                <button
-                  class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
-                  </svg>
-                </button>
-                <input type="text"
-                  class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
-                  placeholder="1" min="1">
-                <button
-                  class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
-                  <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                    xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                    <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
-                      stroke-linecap="round" />
-                  </svg>
-                </button>
-              </div>
-
-              <!-- qunatity * price -->
-              <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
-            
-              <!-- remove from cart button  -->
-            <button type="button"
-            class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-            <span class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-              Remove
-            </span>
-
-           
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z" clip-rule="evenodd"/></svg>
-
-          </button>
-            </div>
           </div>
 
-          <!-- order summary -->
-          <div id="orderSummary"
-            class="max-xl:fixed max-xl:top-[90.5%] max-md:left-0 max-lg:left-0 lg:left-[18rem] max-xl:right-0 max-xl:rounded-b-none xl:col-span-4 h-fit p-6 xl:max-w-lg bg-gray-100 xl:bg-opacity-85 rounded-3xl transition-all duration-300">
-            <div id="orderSummaryHeader" class="flex items-center justify-between pb-4 border-b border-gray-300">
-              <h2 class="font-medium text-lg xl:text-xl">
-                Order Summary</h2>
-              <!-- caret up icon for mobile  -->
-              <svg id="caretUpOrderSummary" fill="currentColor" class="xl:hidden w-8 h-8 p-1.5 bg-gray-200 rounded-full cursor-pointer transition-all duration-300" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M208,172a11.96187,11.96187,0,0,1-8.48535-3.51465L128,96.9707,56.48535,168.48535a12.0001,12.0001,0,0,1-16.9707-16.9707l80-80a11.99975,11.99975,0,0,1,16.9707,0l80,80A12,12,0,0,1,208,172Z"></path> </g></svg>
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
             </div>
-            <div class="mt-6">
-              <div class="pb-6">
-                  <p class="flex items-center justify-between ">
-                    <span>3 Items</span>
-                    <span>$480.00</span>
-                  </p>
-                  <p class="flex items-center justify-between ">
-                    <span>Shipping</span>
-                    <span>$5.00</span>
-                  </p>
-              </div>
-              <form>
-                <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Promo Code
-                </label>
-
-                <div class="flex items-center justify-between gap-4">
-                  <input type="text" name="promocode" id="promocode" placeholder="xxxx xxxx xxxx"
-                  class="block w-full h-11 px-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400 ">
-                  <button
-                      class="rounded-lg bg-black py-2.5 px-4 text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-black/80">Apply</button>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
                 </div>
-               
-
-                <div class="py-8">
-                  <p class="flex items-center justify-between font-bold text-lg">
-                    <span>Total</span>
-                    <span class="text-blue-600">$485.00</span>
-                  </p>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
               </div>
-                <button
-                  class="w-full text-center bg-blue-600 rounded-2xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-blue-700">Checkout</button>
-              </form>
             </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
+          </div>
+
+          <!-- cart card -->
+          <div
+            class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
+              <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
+                alt="" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="sm:col-span-2 md:col-span-3 sm:my-auto w-full">
+              <!-- title of the recipe -->
+              <h3 class="font-medium line-clamp-2 leading-tight capitalize">
+                12" Hybrid Wok with Lid
+              </h3>
+              <div class="mt-1.5 space-y-1.5 text-sm text-gray-500">
+                <!-- rating -->
+                <div class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M11.074 2.633c.32-.844 1.531-.844 1.852 0l2.07 5.734a.99.99 0 0 0 .926.633h5.087c.94 0 1.35 1.17.611 1.743L18 14a.968.968 0 0 0-.322 1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6 14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633z" />
+                  </svg>
+                  3.5 - 12K
+                </div>
+                <!-- time to cook / price -->
+                <p>Rs. 1899</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <button
+                class="group rounded-l-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text"
+                class="border-y border-gray-200 outline-none placeholder:text-black p-[0.31rem] text-center bg-transparent max-w-[50px] min-w-[40px]"
+                placeholder="1" min="1">
+              <button
+                class="group rounded-r-xl p-1.5 border border-gray-200 grid place-content-center shadow-sm shadow-transparent transition-all duration-300 hover:bg-gray-50 hover:shadow-gray-200 focus-within:outline-gray-300">
+                <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-width="1.6" stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                  <path d="M11 5.5V16.5M16.5 11H5.5" stroke="" stroke-opacity="0.2" stroke-width="1.6"
+                    stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- qunatity * price -->
+            <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
+
+            <!-- remove from cart button  -->
+            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
+            group-hover/cart:opacity-100 group-hover/cart:scale-100">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
+                Remove
+              </span>
+
+
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </button>
           </div>
         </div>
+
+        <!-- order summary -->
+        <div id="orderSummary"
+          class="max-xl:fixed max-xl:top-[90.5dvh] max-md:left-0 max-lg:left-0 lg:left-[18rem] max-xl:right-0 max-xl:rounded-b-none xl:col-span-4 h-fit p-6 xl:max-w-lg bg-gray-100 xl:bg-opacity-85 rounded-3xl transition-all duration-300">
+          <div id="orderSummaryHeader" class="flex items-center justify-between pb-4 border-b border-gray-300">
+            <h2 class="font-medium text-lg xl:text-xl">
+              Place Order
+            </h2>
+            <!-- caret up icon for mobile  -->
+            <svg class="xl:hidden w-8 h-8 p-1.5 bg-gray-200 rounded-full cursor-pointer transition-all duration-300"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M9.399 4.328a.75.75 0 0 1 1.06 0l6.364 6.363a1.75 1.75 0 0 1 0 2.475L10.46 19.53a.75.75 0 0 1-1.06-1.06l6.364-6.364a.25.25 0 0 0 0-.354L9.399 5.388a.75.75 0 0 1 0-1.06"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+          <div class="mt-6">
+            <div class="pb-6">
+              <p class="flex items-center justify-between ">
+                <span>3 Items</span>
+                <span>$480.00</span>
+              </p>
+              <p class="flex items-center justify-between ">
+                <span>Shipping</span>
+                <span>$5.00</span>
+              </p>
+            </div>
+            <form>
+              <label class="flex items-center mb-1.5 text-gray-400 text-sm font-medium">Promo Code
+              </label>
+
+              <div class="flex items-center justify-between gap-4">
+                <input type="text" name="promocode" id="promocode" placeholder="xxxx xxxx xxxx"
+                  class="block w-full h-11 px-5 py-2.5 text-base font-normal shadow-xs text-gray-900 bg-white border border-gray-300 rounded-lg placeholder-gray-500 focus:outline-gray-400 ">
+                <button
+                  class="rounded-lg bg-black py-2.5 px-4 text-white text-sm font-semibold text-center transition-all duration-500 hover:bg-black/80">Apply</button>
+              </div>
+
+
+              <div class="py-8">
+                <p class="flex items-center justify-between font-bold text-lg">
+                  <span>Total</span>
+                  <span class="text-blue-600">$485.00</span>
+                </p>
+              </div>
+              <button
+                class="w-full text-center bg-blue-600 rounded-2xl py-3 px-6 font-semibold text-lg text-white transition-all duration-500 hover:bg-blue-700">Checkout</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
     </section>
 

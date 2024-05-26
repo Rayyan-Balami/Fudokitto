@@ -70,7 +70,7 @@ let orderSummaryHeader = document.querySelector("#orderSummaryHeader");
 let caretUpOrderSummary = document.querySelector("#caretUpOrderSummary");
 
 orderSummaryHeader?.addEventListener("click", () => {
-  orderSummary.classList.toggle("max-xl:top-[90.5%]");
-  orderSummary.classList.toggle("max-xl:top-[45.5%]");
+  orderSummary.classList.toggle("max-xl:top-[91dvh]");
+  orderSummary.classList.toggle("max-xl:top-[45.50dvh]");
   caretUpOrderSummary.classList.toggle("rotate-180");
 });
