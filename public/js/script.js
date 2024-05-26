@@ -74,3 +74,24 @@ orderSummaryHeader?.addEventListener("click", () => {
   orderSummary.classList.toggle("max-xl:top-[45.50dvh]");
   caretUpOrderSummary.classList.toggle("rotate-180");
 });
+
+let selectAllLabel = document.querySelector("label[for='select-all-cart-items-checkbox'] span");
+let selectAllCartItems = document.querySelector("#select-all-cart-items-checkbox");
+let cartItems = document.querySelectorAll(".cart-item-checkbox");
+let checkedCartItems = document.querySelector("#checked-items-in-cart");
+
+checkedCartItems.textContent = Array.from(cartItems).filter(item => item.checked).length + " items";
+
+function handleCheckboxChange() {
+  selectAllCartItems.checked = Array.from(cartItems).every(item => item.checked);
+  selectAllLabel.textContent = selectAllCartItems.checked ? "Selected All" : "Select All";
+  checkedCartItems.textContent = Array.from(cartItems).filter(item => item.checked).length + " items";
+}
+
+cartItems?.forEach(item => item.addEventListener('change', handleCheckboxChange));
+
+selectAllCartItems?.addEventListener("change", () => {
+  cartItems?.forEach(item => item.checked = selectAllCartItems.checked);
+  handleCheckboxChange();
+});
+

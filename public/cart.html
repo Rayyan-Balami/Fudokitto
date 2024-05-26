@@ -368,16 +368,49 @@
 
         <!-- cart section  -->
         <div class="col-span-12 xl:col-span-8 lg:pr-6 max-xl:pb-16">
-          <div class="pb-4 border-b border-gray-200">
-            <h2 class="flex items-center justify-between font-medium text-xl tracking-tight">
-              <span>Shopping Cart</span>
-              <span class="text-lg text-gray-700 ">3 Items</span>
+          <div class="flex items-center justify-between  pb-4 border-b border-gray-200">
+            <h2 class="font-medium text-xl tracking-tight">
+              Shopping Cart
+             
             </h2>
+
+            <div class="flex items-center gap-4">
+
+               <!-- remove from cart button  -->
+            <button type="button" class="group/remove focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
+            text-gray-600 hover:text-red-700">
+
+              <span
+                class="hidden text-xs font-medium group-hover/remove:block group-hover/remove:mx-2">
+                Remove from cart
+              </span>
+
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M2 6H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M10 11V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 11V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+            </button>
+
+            <!-- select all items checkbox  -->
+            <label for="select-all-cart-items-checkbox" class="text-xs font-medium cursor-pointer py-1.5 px-3 flex items-center gap-2.5 bg-gray-100 hover:bg-gray-200
+             rounded-full transition-all duration-300 has-[:checked]:text-blue-600 has-[:checked]:bg-blue-100 hover:has-[:checked]:bg-blue-200/80">
+              <span>Selected All</span>
+              <input type="checkbox" class="hidden" id="select-all-cart-items-checkbox" checked>
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M4 6h16M4 12h16m-7 6h7" />
+                </g>
+              </svg>
+            </label>
+
+            <!-- total items in cart  -->
+              <span id="checked-items-in-cart" class="text-lg text-gray-700 font-medium capitalize"></span>
+
+            </div>
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -430,29 +463,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -505,29 +526,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -580,29 +589,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -655,29 +652,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -730,29 +715,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -805,29 +778,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -880,29 +841,17 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
 
           <!-- cart card -->
           <div
             class="group/cart relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 py-4 border-b border-gray-200">
+            
             <div class="sm:row-span-2 md:row-auto aspect-square overflow-hidden rounded-3xl bg-gray-100">
               <img src="https://hexclad.com/cdn/shop/products/13D-12_HYBRIDWOKWITHLID_0248_2048x.jpg?v=1663679276"
                 alt="" class="h-full w-full object-cover object-center">
@@ -955,24 +904,11 @@
             <!-- qunatity * price -->
             <p class="grid place-content-center font-semibold text-lg text-gray-600">Rs. 1899</p>
 
-            <!-- remove from cart button  -->
-            <button type="button" class="group/remove absolute top-[60%] sm:top-2.5 right-2 focus:outline-none p-1.5 flex items-center bg-gray-100 hover:bg-red-200 rounded-full transition-all duration-300
-            text-gray-500 hover:text-red-700 xl:scale-75 xl:opacity-0
-            group-hover/cart:opacity-100 group-hover/cart:scale-100">
-
-              <span
-                class="hidden text-xs font-medium group-hover/remove:w-auto group-hover/remove:block group-hover/remove:mx-2">
-                Remove
-              </span>
-
-
-              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
-                <path fill="currentColor" fill-rule="evenodd"
-                  d="M11.782 4.032a.575.575 0 1 0-.813-.814L7.5 6.687L4.032 3.218a.575.575 0 0 0-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 0 0 .814.814L7.5 8.313l3.469 3.469a.575.575 0 0 0 .813-.814L8.313 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-
-            </button>
+            <!-- checkbox for selecting the product / allow adding buying product/ deleting -->
+            <div class="absolute top-3 right-2 ">
+              <input type="checkbox" class="cart-item-checkbox w-5 h-5 accent-blue-500 rounded-md" checked>
+            </div>
+            
           </div>
         </div>
 
